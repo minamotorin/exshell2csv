@@ -1,4 +1,6 @@
-README of exshell2csv, Version 0.1.1.
+README of exshell2csv, Version 0.1.2.
+
+.. contents::
 
 Abstract
 ########
