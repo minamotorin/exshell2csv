@@ -1,4 +1,4 @@
-README of exshell2csv Version 0.1.
+README of exshell2csv, Version 0.1.1.
 
 Abstract
 ########
@@ -34,6 +34,8 @@ Usage
 :Show list of sheet ids and sheet names: Run ``exshell2csv /path/to/excel.xlsx``. Output is ``[SHEET ID]: [SHEET NAME]``.
 
 :Convert Excel file’s sheet number [SHEET ID] to CSV: Run ``exshell2csv /path/to/excel.xlsx [SHEET ID]``. Not ``[SHEET NAMS]`` but ``[SHEET ID]``. Output to STDOUT.
+
+If you are Microsoft Windows user, maybe you have to run ``exshell2csv [APGUMENTS] | awk "{gsub("$", "\\r"); print}"`` due to carriage ruturn difference. I’ve never checked if this code is required or not.
 
 NOTE
 ####
