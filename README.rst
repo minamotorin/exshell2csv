@@ -133,7 +133,9 @@ Similar Projects
 
 There are many *softwares* or *packages* to convert Excel to CSV.
 
-:`Microsoft Excel <https://www.microsoft.com/en-us/microsoft-365/excel>`_: Excel can convert Excel file to CSV.
+:`Microsoft Excel <https\://www.microsoft.com/en-us/microsoft-365/excel>`_:
+
+  Excel can convert Excel file to CSV.
 
 TODO
   Add similar projects and hyper links.
