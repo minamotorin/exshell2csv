@@ -1,9 +1,17 @@
 #!/bin/sh
 
+####################### exshell2csv version 0.2 ########################
+# exshell2csv: Small script to convert Excel to CSV, written in shell script only. No additional packages are required.
+# Dependencies: Bourne Shell, sed, awk, and unzip.
+# Usage: exshell2csv -h
+# Reporitory: https://github.com/minamotorin/exshell2csv
+# License: GNU General Public License Version 3 (https://www.gnu.org/licenses/gpl-3.0.html).
+########################################################################
+
 if [ "$1" = '-h' ]
 then
   cat<<EOF
-exshell2csv Version 0.1
+exshell2csv Version 0.2
 
 Usage: `basename $0` [-h] [XLSX] [SHEET ID]
 
@@ -24,6 +32,11 @@ if [ "$2" = '' ]
 then
   unzip -p "$1" xl/workbook.xml                                        |
   sed '
+    $!N
+    H
+    $!D
+    x
+    s/\n//g
     s/.*<sheets>//
     s/<\/sheets>.*//
     s/<sheet/\
