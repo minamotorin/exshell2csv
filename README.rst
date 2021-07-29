@@ -1,4 +1,4 @@
-README of exshell2csv, Version 0.1.2.
+README of exshell2csv, Version 0.2.1.
 
 .. contents::
 
@@ -57,7 +57,7 @@ You can add format style yourself\:
 
 2. Run ``exshell2csv.sh /path/to/excel.xlsx [SHEET ID] | sed -n '/^l/d; /^[COLUMN] [LINE]/p'``. You have to replace arguments of exshell2csv.sh and ``[COLUMN]`` and ``[LINE]`` to 1.’s cell’s ones.
 
-Output is ``[COLUMN] [LINE] [FORMAT ID] [VALUES]``. It means format style ``[FORMAT ID]`` will format ``[VALUE]`` as which you want.
+Output is ``[COLUMN] [LINE] [FORMAT ID] [VALUES]``. It means format style ``[FORMAT ID]`` will format ``[VALUES]`` as which you want.
 
 3. Write format awk script in ``[CUSTOM FORMAT STYLE]`` file like this::
 
@@ -152,7 +152,7 @@ If you have questions or feedbacks, or found bugs, typographical errors, wrong E
 Knowledge Bugs
 **************
 
-:leap year: Excel judges year 1900 is a leap year. But this script is not. This is Exces’s bug (due to compatibility). I didn’t implement this because I don’t know the details.
+:leap year: Excel judges year 1900 is a leap year. But this script is not. This is Excel’s bug (due to compatibility). I didn’t implement this because I don’t know the details.
 
 License
 #######
