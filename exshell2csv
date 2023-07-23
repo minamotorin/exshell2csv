@@ -143,8 +143,9 @@ awk '
   #!/usr/bin/env awk -f
   
   BEGIN {
-    OFS = ","
-}
+  	OFS=","
+  }
+  
   # field n and after n
   function after(n,                                                   r) {
     r="";
@@ -269,7 +270,7 @@ awk '
     for (m=1;m<=xmax;m++) {
       if (debug) printf("%s,", m);
       for (n="A";ALPH_lt(n, ymax);n=ALPH_advance(n)) {
-	outline = ""
+        outline = ""
         c =  cell[m, n];
         gsub("\"", "\"\"", c);
         if (match(c, ",")||match(c, "\\n")||match(c, "\"")) outline = outline "\"" c "\"" OFS;
@@ -279,6 +280,7 @@ awk '
         gsub("\"", "\"\"", c);
         if (match(c, ",")||match(c, "\\n")||match(c, "\"")) outline = outline "\"" c "\"";
         else outline = outline c;
+        print outline
     }
   }
 '
