@@ -127,17 +127,17 @@ END{
 
   for (m=1;m<=xmax;m++) {
     if (debug) printf("%s,", m);
+    outline = ""
     for (n="A";ALPH_lt(n, ymax);n=ALPH_advance(n)) {
-      outline = ""
       c =  cell[m, n];
       gsub("\"", "\"\"", c);
       if (match(c, ",")||match(c, "\\n")||match(c, "\"")) outline = outline "\"" c "\"" OFS;
       else outline = outline c OFS;
     }
-      c =  cell[m, ymax];
-      gsub("\"", "\"\"", c);
-      if (match(c, ",")||match(c, "\\n")||match(c, "\"")) outline = outline "\"" c "\"";
-      else outline = outline c;
-      print outline
+    c =  cell[m, ymax];
+    gsub("\"", "\"\"", c);
+    if (match(c, ",")||match(c, "\\n")||match(c, "\"")) outline = outline "\"" c "\"";
+    else outline = outline c;
+    print outline
   }
 }
